@@ -17,5 +17,5 @@ $ firebase deploy --only functions
 
 
 ## Refereence
-[yarn firebase-tools](https://yarnpkg.com/en/package/firebase-tools)
+[yarn firebase-tools](https://yarnpkg.com/en/package/firebase-tools)  
 [Cloud Function get stared](https://firebase.google.com/docs/functions/get-started)
