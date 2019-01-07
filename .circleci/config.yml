@@ -20,7 +20,9 @@ jobs:
       - checkout
 
       - run: cd functions && npm install
+
+      - run: npm install firebase-tools
         
-      - run: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --only functions
+      - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --only functions
 
 
