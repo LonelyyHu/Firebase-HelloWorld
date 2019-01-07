@@ -21,6 +21,6 @@ jobs:
 
       - run: cd functions && npm install
         
-      - run: pwd
+      - run: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --only functions
 
 
