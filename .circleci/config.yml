@@ -19,12 +19,12 @@ jobs:
     steps:
       - checkout
 
+      - run: npm install firebase-tools  
+
       - run: cd functions && npm install
 
-      - run: npm install firebase-tools
-        
       - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --only functions
 
-      - run: npx firebase deploy --only firestore:indexes
+      - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --only firestore:indexes
 
 
