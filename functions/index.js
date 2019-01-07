@@ -21,8 +21,8 @@ exports.addMessage = functions.https.onRequest((req, res) => {
     return docRef.set({
         original
     }).then((snapshot) => {
-        // Redirect with 303 SEE OTHER to the URL of the pushed object in the Firebase console.
-        return res.redirect(303, snapshot.ref.toString());
+        res.send("Success")
+        return "Success111"
     });
 });
 
@@ -30,10 +30,10 @@ exports.addMessage = functions.https.onRequest((req, res) => {
 // uppercase version of the message to /messages/:pushId/uppercase
 exports.makeUppercase = functions.firestore.document('messages/{message}').onCreate((snapshot, context) => {
         
-    const original = snapshot.data();
-    console.log('Uppercasing', context.params.message, original);
+    const data = snapshot.data()
+    console.log('Uppercasing', context.params.message, data.original)
 
-    const uppercase = original.toUpperCase();
+    const uppercase = data.original.toUpperCase()
     // You must return a Promise when performing asynchronous tasks inside a Functions such as
     // writing to the Firebase Realtime Database.
     // Setting an "uppercase" sibling in the Realtime Database returns a Promise.

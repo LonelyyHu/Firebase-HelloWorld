@@ -1,0 +1,46 @@
+{
+  "indexes": [
+    {
+      "collectionId": "messages",
+      "state": "READY",
+      "fields": [
+        {
+          "fieldPath": "original",
+          "mode": "ASCENDING"
+        },
+        {
+          "fieldPath": "uppercase",
+          "mode": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionId": "messages",
+      "state": "READY",
+      "fields": [
+        {
+          "fieldPath": "original",
+          "mode": "ASCENDING"
+        },
+        {
+          "fieldPath": "uppercase",
+          "mode": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionId": "messages",
+      "state": "READY",
+      "fields": [
+        {
+          "fieldPath": "original",
+          "mode": "ASCENDING"
+        },
+        {
+          "fieldPath": "createdAt",
+          "mode": "DESCENDING"
+        }
+      ]
+    }
+  ]
+}
