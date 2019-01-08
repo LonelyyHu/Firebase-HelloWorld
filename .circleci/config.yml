@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  deploy:
     docker:
       # specify the version you desire here
       - image: circleci/node:8.12
@@ -28,5 +28,23 @@ jobs:
       # - run: npx firebase --token=$FIREBASE_DEPLOY_TOKEN firestore:indexes
 
       - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+
+
+workflows:
+  version: 2
+
+  deploy_firebase:
+    jobs:
+      - hold:
+          type: approval
+
+      - deploy:
+          filters:
+            branches:
+              only:
+               - master
+          requires:
+            - hold
+
 
 
