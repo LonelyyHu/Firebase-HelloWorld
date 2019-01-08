@@ -33,7 +33,20 @@ jobs:
 workflows:
   version: 2
 
-  deploy_firebase:
+  deploy_dev:
+    jobs:
+      - hold:
+          type: approval
+
+      - deploy:
+          filters:
+            branches:
+              only:
+               - master
+          requires:
+            - hold
+
+  deploy_alpha:
     jobs:
       - hold:
           type: approval

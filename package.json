@@ -2,5 +2,8 @@
   "name": "Firebase-HelloWorld",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "firebase-tools": "^6.2.2"
+  }
 }
