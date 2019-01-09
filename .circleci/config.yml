@@ -27,7 +27,7 @@ jobs:
 
       - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --only firestore:indexes --non-interactive
 
-      - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --only firestore:indexes --non-interactive
+      - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --only firestore --non-interactive
 
       # - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 
