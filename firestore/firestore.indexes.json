@@ -83,6 +83,20 @@
           "order": "DESCENDING"
         }
       ]
+    },
+    {
+      "collectionGroup": "journeys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "test5Id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "publishedAt",
+          "order": "DESCENDING"
+        }
+      ]
     }
   ],
   "fieldOverrides": []

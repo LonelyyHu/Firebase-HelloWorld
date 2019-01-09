@@ -6,6 +6,7 @@
     "source": "functions"
   },
   "firestore": {
-    "indexes": "./firestore/firestore.indexes.json"
+    "indexes": "./firestore/firestore.indexes.json",
+    "rules": "./firestore/firestore.rules"
   }
 }
