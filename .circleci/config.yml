@@ -25,9 +25,9 @@ jobs:
 
       # - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --only functions
 
-      # - run: npx firebase --token=$FIREBASE_DEPLOY_TOKEN firestore:indexes
+      - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --only firestore:indexes
 
-      - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+      # - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 
 
 workflows:
@@ -35,16 +35,11 @@ workflows:
 
   deploy_dev:
     jobs:
-      - hold:
-          type: approval
-
       - deploy:
           filters:
             branches:
               only:
                - master
-          requires:
-            - hold
 
   deploy_alpha:
     jobs:
