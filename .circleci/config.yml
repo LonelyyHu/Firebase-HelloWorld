@@ -27,8 +27,7 @@ jobs:
 
       # - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --only firestore:indexes && npx firebase --token=$FIREBASE_DEPLOY_TOKEN firestore:indexes
 
-      - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --except functions
-
+      - run: npx firebase deploy --token=$FIREBASE_DEPLOY_TOKEN 
 
 workflows:
   version: 2
